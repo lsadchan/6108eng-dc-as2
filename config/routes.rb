@@ -1,5 +1,9 @@
 Osc::Application.routes.draw do
   
+  get "tags/index"
+
+  get "tags/show"
+
   match '/welcome', :controller  => 'welcome', :action  =>  'index'
   match '/users/login', :controller => 'users', :action => 'login'
   match '/users/register', :controller  => 'users', :action  =>  'new'
@@ -7,6 +11,7 @@ Osc::Application.routes.draw do
   resources :sessions
   resources :news
   resources :racingteams
+  resources :tags
 
   root :to => 'welcome#index'
   get "welcome/index"

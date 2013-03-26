@@ -16,6 +16,7 @@
 	<% @racingteams.each do |racingteam| %>
 	<h3><%= racingteam.title %></h3>
 	<p><%= racingteam.body.html_safe %></p>
+	<p class="label label-info"><%= racingteam.tag_list %></p>
 	<hr/>
 	<%= link_to 'Show', racingteam %> | 
 	<%= link_to 'Edit', edit_racingteam_path(racingteam) %> |  

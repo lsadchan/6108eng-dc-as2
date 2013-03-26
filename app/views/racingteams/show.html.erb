@@ -9,6 +9,7 @@
 	<h4> <%= @racingteam.title %> </h4>
 	<div class="para-wrap">
 	<p><%= @racingteam.body.html_safe %></p>
+	<p><%= tag_links(@racingteam.tags) %></p>
 	</div>
 	<br/>
 	<%= link_to 'Edit', edit_racingteam_path(@racingteam), :class  => "blue-pill" %>
